@@ -11,12 +11,15 @@ describe('index.js', function() {
       expect(multiply).to.eq(62)
     });
   });
+  
   describe('random', function() {
     it("generates a random integer greater than 0", function() {
-      expect(Number.isInteger(random)).to.be.true
-      expect(random).to.not.eq(0)
+      const randomNumber = random();
+      expect(Number.isInteger(randomNumber)).to.be.true;
+      expect(randomNumber).to.be.above(0);
     });
   });
+  
   describe('mod', function() {
     it("is an equation that calculates a remainder that is equal to 4", function() {
       expect(num3).to.be.a('number')
